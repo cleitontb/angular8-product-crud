@@ -21,13 +21,14 @@ class ProductController extends Controller
         return Product::all();
     }
 
-    /**     
+    /**
      * Delete product
      */
     public function delete($id)
     {
         $product = Product::find((integer)$id);
-        $product->delete();
+        if ( $product->delete() ) {
+            return [ 'status' => 'success' ];
+        }
     }
-
 }

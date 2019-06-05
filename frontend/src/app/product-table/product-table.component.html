@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row mt-2">
+    <div class="col-12 text-right">
+      <button mat-raised-button mat-flat-button color="accent">Adicionar</button>
+    </div>
+  </div>
+  <table class="table table-bordered shadow-sm">
+    <thead>
+      <tr>
+        <th class="text-center">ID</th>
+        <th class="text-center">Name</th>
+        <th class="text-center">Price</th>
+        <th class="text-center">Quantity</th>
+        <th class="text-center">
+          Ação
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products">
+        <td class="text-center">{{ p.id }}</td>
+        <td class="text-center">{{ p.name }}</td>
+        <td class="text-center">R$ {{ p.price }}</td>
+        <td class="text-center">{{ p.quantity }}</td>
+        <td>
+          <button mat-icon-button (click)="onClick(p)">
+              <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>  
+</div>

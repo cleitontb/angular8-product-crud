@@ -1,0 +1,25 @@
+table {
+    width: 100%;    
+    margin-top: .5rem;
+}
+
+table th, table td {
+    text-align: center;
+}
+
+table td, table th {
+    padding: .25rem;
+}
+
+table.table-bordered {
+    border: solid 1px #ddd;
+}
+
+table.table-bordered > thead > tr > th,
+table.table-bordered > thead > th {
+    border: solid 1px #ddd;
+}
+
+table.table-bordered > tbody > tr > td {
+    border: solid 1px #ddd;
+}
